@@ -19,6 +19,10 @@ while True:
     # Pass the source image, center points, radius, color, and line thicknes or -1 to fill
     img = cv2.rectangle(img, (100, 100), (200, 200), (128, 128, 128), 5)
 
+    # Drawing a circle
+    # Pass the source image, center position, radius, color, and line thickness or -1 to fill
+    img = cv2.circle(img, (300, 300), 60, (0, 0, 225), -1)
+
     cv2.imshow('Frame', img)
 
     if cv2.waitKey(1) == ord('q'):
