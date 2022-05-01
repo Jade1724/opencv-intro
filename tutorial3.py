@@ -8,7 +8,9 @@ while True:
     # Returns ret (if the capture worked properly) and frame (image itself in numpy array)
     ret, frame = cap.read()
 
-    cv2.imshow('Frame', frame)
+    # Create a blank canvas to show four images
+    image = np.zeros(frame.shape, np.uint8)
+    cv2.imshow('Frame', image)
 
     # Wait up to one millisecond and if q is pressed, end showing the video
     if cv2.waitKey(1) == ord('q'):
