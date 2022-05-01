@@ -23,6 +23,13 @@ while True:
     # Pass the source image, center position, radius, color, and line thickness or -1 to fill
     img = cv2.circle(img, (300, 300), 60, (0, 0, 225), -1)
 
+    # Drawing a text
+    # Specify a font as the first step
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    # Drawing text coordinate is based on bottom left hand corner
+    # Pass the source image, text to render, position, font, font scale, color, thickness, lineType. OpenCV recommends passing cv2.LINE_AA
+    img = cv2.putText(img, 'Tim is Great!', (100, height - 10), font, 1, (0, 0, 0), 2, cv2.LINE_AA)
+
     cv2.imshow('Frame', img)
 
     if cv2.waitKey(1) == ord('q'):
