@@ -8,7 +8,10 @@ while True:
     width = int(cap.get(3))
     height = int(cap.get(4))
 
-    cv2.imshow('frame', frame)
+    # Convert BGR image to HSV to be usable to function to extract a color in OpenCV function
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    cv2.imshow('frame', hsv)
 
     if cv2.waitKey(1) == ord('q'):
         break
