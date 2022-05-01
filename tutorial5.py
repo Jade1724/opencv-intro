@@ -24,6 +24,8 @@ while True:
     result = cv2.bitwise_and(frame, frame, mask=mask)
 
     cv2.imshow('frame', result)
+    # Mask's pixel values are either 0 or 1
+    cv2.imshow('mask', mask)
 
     if cv2.waitKey(1) == ord('q'):
         break
