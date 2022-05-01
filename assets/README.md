@@ -3,4 +3,4 @@
 
 ## References
 
-- Chessboard image: https://raw.githubusercontent.com/techwithtim/OpenCV-Tutorials/main/assets/chessboard.png
+- Image assets: https://github.com/techwithtim/OpenCV-Tutorials/tree/main/assets
