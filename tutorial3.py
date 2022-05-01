@@ -16,10 +16,11 @@ while True:
     # Create a blank canvas to show four images
     image = np.zeros(frame.shape, np.uint8)
     # Shrink the image to one fourth size
+    # The rotated dimension has to fit teh distination matrix segment in the image
     smaller_frame = cv2.resize(frame, (0, 0), fx = 0.5, fy=0.5)
-    image[:height//2, :width//2] = smaller_frame
+    image[:height//2, :width//2] = cv2.rotate(smaller_frame, cv2.cv2.ROTATE_180)
     image[height//2:, :width//2] = smaller_frame
-    image[:height//2, width//2:] = smaller_frame
+    image[:height//2, width//2:] = cv2.rotate(smaller_frame, cv2.cv2.ROTATE_180)
     image[height//2:, width//2:] = smaller_frame
     cv2.imshow('Frame', image)
 
